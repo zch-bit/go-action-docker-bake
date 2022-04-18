@@ -13,7 +13,7 @@ func main() {
 	}
 
 }
-
+a
 func IntMin(a, b int) int {
 	if a < b {
 		return a
