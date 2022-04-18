@@ -7,7 +7,7 @@ import (
 
 func main() {
 	for {
-		fmt.Println("Sleep..."
+		fmt.Println("Sleep...")
 		time.Sleep(3 * time.Second)
 
 	}
