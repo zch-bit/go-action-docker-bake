@@ -1,3 +1,11 @@
+# go-action-docker-bake
+
+Jobs:
+- run unittests
+- bake docker images
+- push to docker hub
+
+```yaml
 name: Go
 
 on:
@@ -32,7 +40,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            zhixichen001/api-server
+            <registry_name>/<product_name> 
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -53,3 +61,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+```
