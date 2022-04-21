@@ -1,7 +1,3 @@
-# go-action-docker-bake
-
-### Test github action
-```yml
 name: Go
 
 on:
@@ -36,7 +32,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            zhixichen001/webapp
+            zhixichen001/api-server
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -57,4 +53,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-```
